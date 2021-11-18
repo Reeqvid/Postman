@@ -12,8 +12,8 @@
 					"listen": "test",
 					"script": {
 						"exec": [
-							"//var jsonData = pm.response.json();\r",
-							"//pm.environment.set(\"token\", jsonData.token);\r",
+							"var jsonData = pm.response.json();\r",
+							"pm.environment.set(\"token\", jsonData.token);\r",
 							""
 						],
 						"type": "text/javascript"
@@ -140,7 +140,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"age\":24,\r\n    \"salary\":1000,\r\n    \"name\":\"Oleg\",\r\n    \"auth_token\":{{token}}\r\n}",
+					"raw": "{\r\n    \"age\":24,\r\n    \"salary\":1000,\r\n    \"name\":\"Oleg\",\r\n    \"auth_token\":\"{{token}}\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
